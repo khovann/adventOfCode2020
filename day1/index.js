@@ -1,7 +1,6 @@
-var fs = require('fs')
+const utils = require('../utils');
 
-// get input
-let cleanList = fs.readFileSync(__dirname + '/input.txt', 'utf-8').split('\n').filter(item => item).map(Number);
+var cleanList = utils.readInput(__dirname + '/input.txt').split('\n').filter(item => item).map(Number);
 
 function star1(list) {
     for (let i = 0; i < list.length; i++) {
